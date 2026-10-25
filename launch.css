@@ -1,0 +1,156 @@
+:root {
+    --theme-color: #1a1a1a;
+    --bg-color: #f5f5f7;
+    --text-main: #333333;
+    --text-sub: #888888;
+    --box-bg: #ffffff;
+    --border-color: #e0e0e0;
+
+    --header-h: 56px;
+    --gap-base: 15px;
+    --gap-lg: 20px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+}
+
+body.theme-blue   { --theme-color: #3b82f6; }
+body.theme-red    { --theme-color: #ef4444; }
+body.theme-black  { --theme-color: #1a1a1a; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--box-bg);
+}
+
+/* 顶部标题栏 #head */
+#head {
+    height: var(--header-h);
+    flex-shrink: 0;
+    background-color: var(--theme-color);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--gap-lg);
+    color: white;
+    z-index: 10;
+}
+#head h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+#head-title-web {
+    opacity: 0.8;
+    font-weight: 400;
+}
+#close {
+    margin-left: auto;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+/* 中间启动区域 #launch */
+#launch {
+    flex: 1;
+    padding: 30px var(--gap-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+#launch-text {
+    color: var(--text-main);
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* 版本下拉选择框 */
+#version-select {
+    width: 220px;
+    height: 44px;
+    padding: 0 14px;
+    background-color: #888888;
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 启动游戏主按钮 */
+#launch-game {
+    width: calc(100% - 40px);
+    max-width: 320px;
+    height: 52px;
+    background-color: white;
+    color: black;
+    border: 2px solid var(--theme-color);
+    border-radius: var(--radius-lg);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: opacity 0.2s;
+}
+#launch-game:active {
+    opacity: 0.8;
+}
+
+/* 底部 #foot 区域：重置按钮 + 警告文字 */
+#foot {
+    flex-shrink: 0;
+    padding: 16px var(--gap-lg) 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+#init-reset {
+    padding: 10px 22px;
+    border: 1px solid var(--border-color);
+    background: var(--box-bg);
+    color: var(--text-main);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .2s;
+}
+#init-reset:active {
+    background: var(--bg-color);
+}
+#wasm-warning{
+    font-size: 14px;
+    color: #ef4444;
+    text-align: center;
+    min-height: 20px;
+}
+#inf{
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    min-height: 20px;
+}

@@ -1,0 +1,37 @@
+<html lang="zh">
+
+<head>
+    <link rel="stylesheet" href="./launch.css">
+    <script src="./script/launch.js"></script>
+    <script src="./script/mainpage.js"></script>
+    <title>Plain Craft Launcher Web Edited</title>
+    
+</head>
+
+<body>
+    <div id="main">
+        <div id="head">
+            <h1 id="head-title">PCL (Plain Craft Launcher) <span id="head-title-web">Web</span> Edited</h1>
+            <button id="close" onclick="clse()">×</button>
+        </div>
+        <div id="launch">
+            <p id="launch-text">WASM版我的世界启动时间较长，<br> 大约需要 1～3 分钟</p>
+            <select id="version-select" style="display: block; width: 200px; height: 40px; background: #888888; color: white; margin: 10px auto; font-size: 16px;">
+                <option value="1">1.8.8</option>
+                <option value="3">1.13.2</option>
+                <option value="4">1.16.5</option>
+                <option value="5">1.21.11</option>
+                <option value="2" selected>26.3</option>
+            </select>
+            <button id="launch-game" onclick="launchGame()">启动游戏</button>
+        </div>
+        <div id="foot">
+            <button id="init-reset" onclick="resetInit()">重置初始化</button>
+            <p id="wasm-warning"></p>
+            <p id="inf">这款启动器的开发思路来自于 @龙腾猫跃<br>但是这款启动器和它的PCL 2没有直接关系</p>
+        </div>
+    </div>
+    <script src="./script/wasmCheck.js"></script>
+</body>
+
+</html>
